@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         let appDefaults = [String:AnyObject]()
         UserDefaults.standard.register(defaults: appDefaults)
     }
-    func defaultsChanged(){
+    @objc func defaultsChanged(){
         if UserDefaults.standard.bool(forKey: "RedThemeKey") {
             self.view.backgroundColor = UIColor.red
         
